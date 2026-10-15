@@ -28,3 +28,6 @@ def analyser_produits():
         "prix_max": stats["max"],
         "apercu_colonnes": list(df.columns)
     }), 200
+
+if __name__ == "__main__":
+    app.run(debug=True, port=3000)
