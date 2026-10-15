@@ -9,7 +9,7 @@ def analyser_produits():
     url = "https://dummyjson.com/products"
    
     # 1. Extraction : Lecture directe du flux JSON distant
-    donnees = pd.read_json(url)
+    donnees = pd.read_json(url, storage_options={"User-Agent": "Mozilla/5.0"})
    
     # 2. Transformation : Extraction de la liste 'products' en DataFrame
     df = pd.DataFrame(list(donnees["products"]))
